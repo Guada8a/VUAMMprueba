@@ -7,7 +7,7 @@ export default defineConfig({
     lib: {
       entry: {
         // 'dynamic-table': './src/DynamicTableElement.jsx',
-        'vuamm-card': './src/DashboardCardElement.jsx'
+        'vuamm-card': './src/components/DashboardCardElement.jsx',
       },
       name: 'VUAMM-front',
       formats: ['es', 'umd'],
