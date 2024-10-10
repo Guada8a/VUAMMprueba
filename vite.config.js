@@ -11,17 +11,19 @@ export default defineConfig({
         'vuamm-card': './src/components/DashboardCardElement.jsx',
       },
       name: 'VUAMM-front',
-      formats: ['es', 'umd'],
+      formats: ['es', 'cjs', 'umd'],
       fileName: (format) => `vuamm-front.${format}.js`, // Puedes combinar ambos en un solo archivo
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'antd', 'axios'],
+      external: ['react', 'react-dom', 'antd', 'axios', 'react-router-dom', 'prop-types'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
           antd: 'antd',
           axios: 'axios',
+          'react-router-dom': 'ReactRouterDOM',
+          'prop-types': 'PropTypes',
         },
       },
     },
