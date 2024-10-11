@@ -4,13 +4,13 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/VUAMMprueba/',
+  define : {
+    'process.env': {}
+  },
   build: {
     lib: {
-      entry: {
-        // 'dynamic-table': './src/DynamicTableElement.jsx',
-        'vuamm-card': './src/components/DashboardCard.jsx',
-      },
-      name: 'VUAMM-front',
+      entry: './src/main.jsx',
+      name: 'VUAMMFront',
       formats: ['es', 'cjs', 'umd'],
       fileName: (format) => `vuamm-front.${format}.js`, // Puedes combinar ambos en un solo archivo
     },
